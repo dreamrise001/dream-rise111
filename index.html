@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dream Rise | Web制作・デザイン</title>
+<meta name="description" content="Dream Riseは中小企業・個人事業主向けのWeb制作・デザインを提供します。">
+<link rel="icon" href="assets/logo.png">
+<style>
+
+:root{
+  --bg:#0f0d14;
+  --fg:#f7f7fb;
+  --muted:#bfb9d6;
+  --brand1:#ac6cff; /* purple */
+  --brand2:#ff7ac9; /* pink */
+  --card:#16131f;
+  --stroke:#2a233a;
+  --shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1100px,92%);margin:0 auto}
+
+header.nav{
+  position:sticky; top:0; z-index:10; backdrop-filter: blur(8px);
+  background:linear-gradient(90deg, rgba(172,108,255,.12), rgba(255,122,201,.12));
+  border-bottom:1px solid var(--stroke);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:36px;width:auto;filter:drop-shadow(0 4px 10px rgba(172,108,255,.3))}
+.brand .name{font-weight:700;letter-spacing:.4px}
+nav a{padding:10px 14px;border-radius:8px;border:1px solid transparent}
+nav a:hover{border-color:var(--stroke);background:rgba(255,255,255,.03)}
+
+.hero{
+  position:relative; overflow:hidden;
+  padding:96px 0 72px;
+  background:
+    radial-gradient(650px 200px at 10% -10%, rgba(172,108,255,.25), rgba(0,0,0,0)),
+    radial-gradient(650px 200px at 90% -10%, rgba(255,122,201,.25), rgba(0,0,0,0));
+}
+.hero .title{font-size: clamp(28px, 5vw, 54px); line-height:1.15; margin:0 0 14px; font-weight:800}
+.hero .subtitle{color:var(--muted);font-size:clamp(14px, 2.5vw, 18px);max-width:800px}
+.cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.button{
+  padding:12px 18px;border-radius:12px;font-weight:700;border:1px solid var(--stroke);
+  background: linear-gradient(135deg, var(--brand1), var(--brand2)); color:white;
+  box-shadow: var(--shadow);
+}
+.button.ghost{
+  background:transparent;color:var(--fg);border-color:var(--stroke)
+}
+.section{padding:64px 0;border-top:1px solid var(--stroke)}
+.section h2{font-size:clamp(22px,3.2vw,32px);margin:0 0 8px}
+.section p.lead{color:var(--muted);margin-top:0}
+
+.grid{display:grid;gap:18px}
+.grid.cards{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
+  border:1px solid var(--stroke); border-radius:16px; padding:18px; box-shadow: var(--shadow);
+}
+.card h3{margin:2px 0 6px}
+.badge{display:inline-block;padding:4px 10px;border-radius:999px;font-size:12px;
+  background:linear-gradient(90deg,var(--brand1),var(--brand2));color:white;margin-bottom:8px}
+
+.gallery{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.thumb{position:relative;overflow:hidden;border-radius:16px;border:1px solid var(--stroke)}
+.thumb .cap{position:absolute;inset:auto 0 0 0;padding:12px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.55));font-weight:600}
+
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:18px}
+.kpi .tile{border:1px solid var(--stroke);border-radius:16px;padding:16px;background:var(--card);text-align:center}
+.kpi .num{font-size:28px;font-weight:800;background:linear-gradient(90deg,var(--brand1),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+footer{padding:40px 0;color:var(--muted);border-top:1px solid var(--stroke);text-align:center}
+
+.form{display:grid;gap:12px;max-width:640px}
+input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--stroke);background:#120f1a;color:var(--fg)}
+textarea{min-height:120px;resize:vertical}
+.form .submit{justify-self:flex-start}
+
+small.note{display:block;color:var(--muted)}
+
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Dream Rise ロゴ">
+      <div class="name">Dream Rise</div>
+    </div>
+    <nav>
+      <a href="#services">サービス</a>
+      <a href="#works">実績</a>
+      <a href="#about">私たちについて</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1 class="title">あなたの夢を、<br>確かなカタチに。</h1>
+    <p class="subtitle">
+      Web制作・デザイン・UI/UX改善で、ビジネスの成長をサポート。<br>
+      WordPress構築、レスポンシブ対応、基本SEOまでワンストップでお任せください。
+    </p>
+    <div class="cta">
+      <a class="button" href="#contact">無料相談はこちら</a>
+      <a class="button ghost" href="#works">制作実績を見る</a>
+    </div>
+    <div class="kpi">
+      <div class="tile"><div class="num">2〜4週間</div><div>一般的な制作期間</div></div>
+      <div class="tile"><div class="num">¥80,000〜</div><div>小規模サイト目安</div></div>
+      <div class="tile"><div class="num">保守OK</div><div>更新・改善も対応</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="container">
+    <h2>サービス</h2>
+    <p class="lead">目的に合わせて、成果につながるWebサイトを設計・制作します。</p>
+    <div class="grid cards">
+      <div class="card">
+        <span class="badge">Web制作</span>
+        <h3>WordPressサイト構築</h3>
+        <p>更新しやすいWordPressで、スマホ対応・基本SEOを含めたサイトを制作します。</p>
+      </div>
+      <div class="card">
+        <span class="badge">UI/UX</span>
+        <h3>使いやすさの設計</h3>
+        <p>導線・読みやすさ・CV設計を意識したデザインで、成果を最大化します。</p>
+      </div>
+      <div class="card">
+        <span class="badge">Branding</span>
+        <h3>ロゴ・バナー制作</h3>
+        <p>ブランドの世界観を統一し、信頼感と印象に残るビジュアルを作ります。</p>
+      </div>
+      <div class="card">
+        <span class="badge">Care</span>
+        <h3>運用・保守サポート</h3>
+        <p>公開後の更新・改善・セキュリティなど、継続的に伴走いたします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="works" class="section">
+  <div class="container">
+    <h2>実績（サンプル）</h2>
+    <p class="lead">公開可能な実績は順次追加予定です。現在はサンプルを掲載しています。</p>
+    <div class="grid gallery">
+      <figure class="thumb">
+        <img src="assets/logo.png" alt="Dream Rise ロゴ" style="width:100%;display:block">
+        <figcaption class="cap">Dream Rise ロゴ</figcaption>
+      </figure>
+      <figure class="thumb">
+        <svg viewBox="0 0 1200 800" style="display:block;width:100%;height:auto;background:#171425">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#ac6cff"/>
+              <stop offset="1" stop-color="#ff7ac9"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="1200" height="800" fill="#171425"/>
+          <circle cx="280" cy="260" r="180" fill="url(#g1)" opacity=".5"/>
+          <rect x="380" y="180" width="560" height="320" rx="22" fill="none" stroke="url(#g1)" stroke-width="6"/>
+          <text x="400" y="360" fill="#ffffff" font-size="42" font-weight="700">Cafe Sample Landing</text>
+        </svg>
+        <figcaption class="cap">カフェサイト サンプルLP</figcaption>
+      </figure>
+      <figure class="thumb">
+        <svg viewBox="0 0 1200 800" style="display:block;width:100%;height:auto;background:#171425">
+          <defs>
+            <linearGradient id="g2" x1="0" x2="1">
+              <stop offset="0" stop-color="#ac6cff"/>
+              <stop offset="1" stop-color="#ff7ac9"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="1200" height="800" fill="#171425"/>
+          <rect x="160" y="140" width="880" height="520" rx="22" fill="none" stroke="url(#g2)" stroke-width="6"/>
+          <text x="200" y="330" fill="#ffffff" font-size="42" font-weight="700">美容室サイト デザイン例</text>
+          <text x="200" y="390" fill="#bfb9d6" font-size="28">Hero / Menu / Gallery / Reserve</text>
+        </svg>
+        <figcaption class="cap">美容室サイト デザインサンプル</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <h2>私たちについて</h2>
+    <p class="lead">「夢をカタチに」。Dream Riseは、中小企業・個人事業主さまの成長に寄り添う制作パートナーです。</p>
+    <div class="grid cards">
+      <div class="card">
+        <h3>大切にしていること</h3>
+        <p>ただ作るだけでなく、目的に合った成果設計（集客・採用・信頼）を重視します。丁寧な進行管理で、初めての方でも安心。</p>
+      </div>
+      <div class="card">
+        <h3>体制</h3>
+        <p>デザイナー・エンジニアと連携する外部パートナーシップ。規模や納期に応じて柔軟にアサインします。</p>
+      </div>
+      <div class="card">
+        <h3>強み</h3>
+        <p>UI/UXの観点で使いやすさを設計。WordPressで更新性を担保し、公開後の改善も見据えます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <h2>お問い合わせ</h2>
+    <p class="lead">ご相談は無料です。まずはお気軽にお問い合わせください。</p>
+    <form class="form" onsubmit="alert('デモサイトのため、送信はできません。クラウドワークスのメッセージからご連絡ください。'); return false;">
+      <input type="text" placeholder="お名前">
+      <input type="email" placeholder="メールアドレス">
+      <textarea placeholder="ご相談内容"></textarea>
+      <button class="button submit">送信（デモ）</button>
+      <small class="note">※デモのため、実際の送信は行われません。クラウドワークスのDMにてご連絡ください。</small>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © 345635539 Dream Rise. All rights reserved.
+  </div>
+</footer>
+
+<script>
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+  });
+});
+
+</script>
+
+</body>
+</html>
