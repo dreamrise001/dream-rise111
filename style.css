@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background: #0d0d0d;  /* 黒ベース */
+  background: #0d0d0d; /* 黒ベース */
   color: #fff;
   line-height: 1.6;
 }
@@ -11,25 +11,26 @@ body {
 header {
   background: #1a1a1a;
   padding: 15px 20px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 左ロゴ・右メニュー */
 }
 
 header img {
-  height: 50px;
+  height: 40px;
 }
 
 /* ナビゲーション */
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0;
+  margin: 0;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0;
 }
 
 nav ul li a {
@@ -42,7 +43,7 @@ nav ul li a {
 .hero {
   text-align: center;
   padding: 80px 20px;
-  background: linear-gradient(135deg, #1e0033, #33004d);
+  background: linear-gradient(135deg, #2b0a3d, #0d0d0d);
 }
 
 .hero h1 {
@@ -68,7 +69,7 @@ nav ul li a {
 }
 
 .btn.primary {
-  background: linear-gradient(90deg, #ff00cc, #ff66cc);
+  background: linear-gradient(90deg, #ff66cc, #cc66ff);
   color: #fff;
 }
 
@@ -114,7 +115,7 @@ nav ul li a {
 .gallery img {
   width: 300px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 0, 200, 0.4);
+  box-shadow: 0 0 15px rgba(255, 0, 200, 0.3);
 }
 
 /* フッター */
