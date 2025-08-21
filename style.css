@@ -1,177 +1,188 @@
+/* 全体 */
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Arial', sans-serif;
   background: #0d0d0d;
   color: #fff;
   line-height: 1.6;
 }
 
-header {
+/* ナビゲーション */
+header.navbar {
   background: #111;
   padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
-
-nav .logo {
-  font-size: 20px;
+.logo {
+  font-size: 1.5em;
   font-weight: bold;
-  color: #fff;
 }
-
+.logo span {
+  color: #ff66cc;
+}
 nav ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
 }
-
+nav ul li {
+  margin: 0 10px;
+}
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 14px;
-}
-
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #200020, #000);
-}
-
-.hero h1 {
-  font-size: 28px;
   font-weight: bold;
-}
-
-.hero p {
-  margin: 20px auto;
-  max-width: 600px;
-}
-
-.buttons {
-  margin-top: 20px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 8px;
-  margin: 5px;
-  text-decoration: none;
-  color: #fff;
-  background: #222;
   transition: 0.3s;
 }
-
-.btn:hover {
-  opacity: 0.8;
+nav ul li a:hover {
+  color: #ff66cc;
 }
 
-.btn.gradient {
-  background: linear-gradient(90deg, #ff69b4, #8a2be2);
-}
-
-.features {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 40px 20px;
-  flex-wrap: wrap;
-}
-
-.feature {
-  background: #111;
-  padding: 20px;
-  border-radius: 12px;
+/* ヒーロー */
+.hero {
   text-align: center;
-  width: 200px;
-  box-shadow: 0 0 10px rgba(255, 0, 255, 0.2);
+  padding: 60px 20px; /* ← 少し縮めた */
+  background: linear-gradient(135deg, #1a0033, #0d0d0d);
 }
-
-.feature h3 {
-  color: #ff69b4;
+.hero h1 {
+  font-size: 2em;
+  margin-bottom: 15px;
 }
-
-.services, .works, .about, .contact {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-h2 {
-  text-align: center;
+.hero p {
+  font-size: 1em;
+  color: #ccc;
   margin-bottom: 20px;
 }
-
-.service-list, .about-cards, .work-list {
-  display: grid;
-  gap: 20px;
+.hero-buttons {
+  margin-top: 15px;
 }
-
-.service-list {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.about-cards {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.work-list {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.card, .work-card {
-  background: #111;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(255, 0, 255, 0.2);
-}
-
-.work-card img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-.tag {
+.btn {
   display: inline-block;
-  padding: 4px 10px;
-  border-radius: 20px;
-  background: linear-gradient(90deg, #ff69b4, #8a2be2);
-  font-size: 12px;
+  padding: 12px 25px;
+  margin: 5px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn-primary {
+  background: linear-gradient(90deg, #ff66cc, #cc66ff);
+  color: #fff;
+}
+.btn-primary:hover {
+  opacity: 0.8;
+}
+.btn-secondary {
+  background: #222;
+  border: 1px solid #666;
+  color: #fff;
+}
+.btn-secondary:hover {
+  background: #444;
+}
+
+/* ポイント */
+.points {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 20px;
+}
+.point {
+  background: #111;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 0 15px rgba(255, 0, 200, 0.3);
+}
+.point h3 {
+  color: #ff66cc;
   margin-bottom: 10px;
 }
 
-.contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin: 20px auto;
-  max-width: 400px;
+/* セクション共通 */
+section {
+  padding: 40px 20px;  /* ← 60px → 40px に調整 */
+  text-align: center;
+}
+section h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+section p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  color: #ccc;
 }
 
-.contact input, .contact textarea {
-  padding: 10px;
+/* サービスカード・実績カード */
+.service-list, .about-list, .works-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.service-card, .about-card, .work-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 250px;
+  max-width: 300px;
+  box-shadow: 0 0 10px rgba(255, 0, 200, 0.2);
+  transition: transform 0.3s;
+}
+.service-card:hover, .about-card:hover, .work-card:hover {
+  transform: translateY(-5px);
+}
+.service-card .tag {
+  display: inline-block;
+  background: #ff66cc;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+.work-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* お問い合わせ */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+form input, form textarea {
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 5px;
   border: none;
-  border-radius: 8px;
   background: #222;
   color: #fff;
 }
-
-.contact button {
+form button {
+  margin-top: 10px;
   border: none;
   cursor: pointer;
 }
 
-footer {
+/* フッター */
+.footer {
   background: #111;
+  padding: 15px; /* ← 余白を小さく */
   text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  color: #aaa;
+  color: #777;
+  font-size: 0.9em;
 }
