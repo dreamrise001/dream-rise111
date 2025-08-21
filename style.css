@@ -80,3 +80,13 @@ h2 {
   flex: 1 1 300px;
   text-align: center;
 }
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 96px 0 72px;
+  text-align: center;
+  color: #fff;
+
+  /* グラデーション背景 */
+  background: linear-gradient(135deg, #ac6cff, #ff7ac9);
+}
