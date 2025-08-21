@@ -7,11 +7,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <!-- ナビゲーション -->
-  <header>
+  <header class="navbar">
+    <div class="logo">Dream <span>Rise</span></div>
     <nav>
-      <div class="logo">Dream Rise</div>
       <ul>
         <li><a href="#services">サービス</a></li>
         <li><a href="#works">実績</a></li>
@@ -24,25 +23,27 @@
   <!-- ヒーロー -->
   <section class="hero">
     <h1>あなたの夢を、<br>確かなカタチに。</h1>
-    <p>Web制作・デザイン・UI/UX改善で、ビジネスの成長をサポート。<br>
-    WordPress構築、レスポンシブ対応、基本SEOまでワンストップでお任せください。</p>
-    <div class="buttons">
-      <a href="#contact" class="btn gradient">無料相談はこちら</a>
-      <a href="#works" class="btn">制作実績を見る</a>
+    <p>
+      Web制作・デザイン・UI/UX改善で、ビジネスの成長をサポート。<br>
+      WordPress構築、レスポンシブ対応、基本SEOまでワンストップでお任せください。
+    </p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn btn-primary">無料相談はこちら</a>
+      <a href="#works" class="btn btn-secondary">制作実績を見る</a>
     </div>
   </section>
 
-  <!-- 制作概要 -->
-  <section class="features">
-    <div class="feature">
+  <!-- ポイント -->
+  <section class="points">
+    <div class="point">
       <h3>2〜4週間</h3>
       <p>一般的な制作期間</p>
     </div>
-    <div class="feature">
+    <div class="point">
       <h3>¥80,000〜</h3>
       <p>小規模サイト目安</p>
     </div>
-    <div class="feature">
+    <div class="point">
       <h3>保守OK</h3>
       <p>更新・改善も対応</p>
     </div>
@@ -53,22 +54,22 @@
     <h2>サービス</h2>
     <p>目的に合わせて、成果につながるWebサイトを設計・制作します。</p>
     <div class="service-list">
-      <div class="card">
+      <div class="service-card">
         <span class="tag">Web制作</span>
         <h3>WordPressサイト構築</h3>
         <p>更新しやすいWordPressで、スマホ対応・基本SEOを含めたサイトを制作します。</p>
       </div>
-      <div class="card">
+      <div class="service-card">
         <span class="tag">UI/UX</span>
         <h3>使いやすさの設計</h3>
-        <p>導線・読みやすさ・CV設計を意識したデザインで、成果を最大化します。</p>
+        <p>導線・読みやすさ・CV設計を意識したデザインで成果を最大化します。</p>
       </div>
-      <div class="card">
+      <div class="service-card">
         <span class="tag">Branding</span>
         <h3>ロゴ・バナー制作</h3>
         <p>ブランドの世界観を統一し、信頼感と印象に残るビジュアルを作ります。</p>
       </div>
-      <div class="card">
+      <div class="service-card">
         <span class="tag">Care</span>
         <h3>運用・保守サポート</h3>
         <p>公開後の更新・改善・セキュリティなど、継続的に伴走いたします。</p>
@@ -80,17 +81,17 @@
   <section id="works" class="works">
     <h2>実績（サンプル）</h2>
     <p>公開可能な実績は順次追加予定です。現在はサンプルを掲載しています。</p>
-    <div class="work-list">
+    <div class="works-list">
       <div class="work-card">
-        <img src="https://via.placeholder.com/300x200" alt="Dream Rise ロゴ">
+        <img src="images/dreamrise-logo.png" alt="Dream Rise ロゴ">
         <p>Dream Rise ロゴ</p>
       </div>
       <div class="work-card">
-        <img src="https://via.placeholder.com/300x200" alt="Cafe Sample Landing">
+        <img src="images/cafe-sample.png" alt="カフェサイト サンプルLP">
         <p>カフェサイト サンプルLP</p>
       </div>
       <div class="work-card">
-        <img src="https://via.placeholder.com/300x200" alt="美容室サイト デザイン例">
+        <img src="images/hairsalon-sample.png" alt="美容室サイト デザインサンプル">
         <p>美容室サイト デザインサンプル</p>
       </div>
     </div>
@@ -100,17 +101,16 @@
   <section id="about" class="about">
     <h2>私たちについて</h2>
     <p>「夢をカタチに」。Dream Riseは、中小企業・個人事業主さまの成長に寄り添う制作パートナーです。</p>
-
-    <div class="about-cards">
-      <div class="card">
+    <div class="about-list">
+      <div class="about-card">
         <h3>大切にしていること</h3>
-        <p>目的に合った成果設計（集客・採用・信頼）を重視。丁寧な進行管理で、初めての方でも安心。</p>
+        <p>目的に合った成果設計（集客・採用・信頼）を重視。丁寧な進行管理で初めての方も安心。</p>
       </div>
-      <div class="card">
+      <div class="about-card">
         <h3>体制</h3>
-        <p>デザイナー・エンジニアと連携する外部パートナーシップ。規模や納期に応じて柔軟にアサイン。</p>
+        <p>デザイナー・エンジニアと連携する外部パートナーシップ。規模や納期に応じて柔軟に対応。</p>
       </div>
-      <div class="card">
+      <div class="about-card">
         <h3>強み</h3>
         <p>UI/UXの観点で使いやすさを設計。WordPressで更新性を担保し、公開後の改善も見据えます。</p>
       </div>
@@ -122,18 +122,17 @@
     <h2>お問い合わせ</h2>
     <p>ご相談は無料です。まずはお気軽にお問い合わせください。</p>
     <form>
-      <input type="text" placeholder="お名前">
-      <input type="email" placeholder="メールアドレス">
-      <textarea placeholder="ご相談内容"></textarea>
-      <button type="submit" class="btn gradient">送信（デモ）</button>
+      <input type="text" placeholder="お名前" required>
+      <input type="email" placeholder="メールアドレス" required>
+      <textarea placeholder="ご相談内容" required></textarea>
+      <button type="submit" class="btn btn-primary">送信（デモ）</button>
     </form>
-    <small>※デモのため、実際の送信は行われません。</small>
+    <p class="note">※デモのため、実際の送信は行われません。クラウドワークスのDMにてご連絡ください。</p>
   </section>
 
   <!-- フッター -->
-  <footer>
+  <footer class="footer">
     <p>© 2024 Dream Rise. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
